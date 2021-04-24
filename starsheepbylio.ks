@@ -202,7 +202,7 @@ function asklaunch{
 function init {
 
     //You can change that -->
-    set ap to 16000.  //desired apoapsis (Choose an altitude between 10000 and 20000)
+    set ap to 10000.  //desired apoapsis (Choose an altitude between 10000 and 20000)
     set landingZone to latlng((-0.131492490075593), -74.5349268442667).  //desired landing zone, latitude on the left and longitude on the right
 
     //Don't touch -->
