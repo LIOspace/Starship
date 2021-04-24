@@ -692,7 +692,7 @@ FUNCTION landing {
     set ship:control:neutralize to true.
     lock steering to getSteering().
 
-    lock throttle to idealThrottle + 0.4.
+    lock throttle to idealThrottle + 0.35.
     toggle ag8.
     wait until ship:verticalspeed > -30.
     lock throttle to idealThrottle + 0.4.
