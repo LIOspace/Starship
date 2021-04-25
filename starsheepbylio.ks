@@ -202,7 +202,7 @@ function asklaunch{
 function init {
 
     //You can change that -->
-    set ap to 10000.  //desired apoapsis (Choose an altitude between 10000 and 20000)
+    set ap to 20000.  //desired apoapsis (Choose an altitude between 10000 and 20000)
     set landingZone to latlng((-0.131492490075593), -74.5349268442667).  //desired landing zone, latitude on the left and longitude on the right
 
     //Don't touch -->
@@ -366,7 +366,7 @@ function prelaunch {
         set abort to false.
     }
     else {
-        set LASTEVENT to "DIT INCORRECT".
+        set LASTEVENT to "DIR INCORRECT".
         set abort to true.
     }
 
@@ -692,10 +692,10 @@ FUNCTION landing {
     set ship:control:neutralize to true.
     lock steering to getSteering().
 
-    lock throttle to idealThrottle + 0.35.
-    toggle ag8.
-    wait until ship:verticalspeed > -30.
     lock throttle to idealThrottle + 0.4.
+    ag5 on.
+    wait until ship:verticalspeed > -30.
+    lock throttle to idealThrottle + 0.35.
 
     wait until ship:verticalSpeed > -20.
     set cf to facing. 
